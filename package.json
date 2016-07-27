@@ -1,0 +1,21 @@
+{
+  "name": "node-summit-2016",
+  "version": "1.0.0",
+  "description": "node summmit 2016 CLI presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "node",
+    "summit",
+    "cli",
+    "talk"
+  ],
+  "author": "Irina Shestak",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.0.0"
+  }
+}
