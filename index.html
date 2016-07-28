@@ -62,7 +62,7 @@
       yourCoolCli -rgb global-status --latest -m
       ```
       --
-      # .yellow[lol what Pokemon is this?]
+      # .yellow[what Pokemon is this?]
 
       ---
       class: middle
@@ -113,7 +113,92 @@
       ```bash
       yourCoolCli -rgb global-status --latest -m
       ```
-      # .yellow[lol what Pokemon is this?]
+      # .yellow[what Pokemon is this?]
+
+      ---
+      class: middle
+      # ![ok](./src/images/ok.png),&nbsp![cool](./src/images/cool.png)
+      # .yellow[so what's a command line application ?]
+
+      ---
+      class: middle
+
+      # .yellow[git]
+      ```bash
+      git rebase i veryCoolSHA
+      ```
+
+      ---
+      class: middle
+
+      # .yellow[npm]
+      ```bash
+      npm i coolModule@latest
+      ```
+
+      ---
+      class: middle
+
+      # .yellow[vagrant]
+      ```bash
+      vagrant halt processID
+      ```
+
+      ---
+      class: middle
+
+      # .yellow[ls]
+      ```bash
+      ls -al
+      ```
+
+      ---
+      class: middle
+
+      # .yellow[cow-say]
+      .citation[https://www.npmjs.com/package/cowsay]
+      ```bash
+       cowsay sup node summit
+       _________________
+       < sup node summit >
+       -----------------
+               \    ^__^
+                \   (oo)\_______
+                    (__)\       )\/\
+                        ||----w |
+                        ||     ||
+      ```
+
+      ---
+      class: middle
+
+      # .yellow[wombat]
+      .citation[https://www.npmjs.com/package/wombatjs]
+      ```bash
+      wombat hello node summit
+
+                       ,.--"""--.._
+                     ."     .'      `-.
+                    ;      ;           ;
+                   '      ;             )
+                  /     '             . ;
+                 /     ;     `.        `;
+               ,.'     :         .     : )
+               ;|\'    :      `./|) \  ;/
+               ;| \"  -,-   "-./ |;  ).;
+               /\/              \/   );
+              :                 \    ;
+              :     _      _     ;   )
+              `.   \;\    /;/    ;  /
+                !    :   :     ,/  ;
+                 (`. : _ : ,/"   ;
+                  \\\`"^" ` :    ;
+                           (     )
+                      /     ////
+                   /
+                /
+        <----(hello node summmit)---->
+      ```
 
       ---
       class: middle
@@ -139,26 +224,425 @@
       ---
       class: middle
 
-      # .yellow[git]
+      # .yellow[Some] of us work quite a bit in terminal and commmand line setting
+
+      ---
+      class: middle
+
+      # But not .yellow[everyone]
+
+      ---
+      class: middle
+
+      ```bash
+      yourCoolCli -rgb global-status --latest -m
       ```
-      git rebase i veryCoolSHA
+
+      # .yellow[what Pokemon is this?]
+      ---
+      class: middle
+
+      # .yellow[We care about user experience in the web, but not in our terminals]
+
+      ---
+      class: middle
+
+      # .yellow[let's fix it]
+
+      ---
+      class: bottom, center
+      background-image: url(./src/images/excited-baby.gif)
+      background-size: cover
+
+      # .yellow-background[Make Command Line Interfaces Great Again]
+
+      ---
+      class: middle
+      # .yellow-background[Irina's guide to interactivity&trade;]
+
+      ---
+      class: middle
+
+      # ![cool](./src/images/cool.png),&nbsp
+      #.yellow[so you want to write a command line module?]
+
+      ---
+      class: middle
+
+      ## - building a tool to handle your API
+      --
+
+      ## - cron task
+      --
+
+      ## - reusable module to make your life easier
+
+      ---
+      class: center, middle
+
+      # .align-center[![robot](./src/images/robot.png) -------> bash?]
+
+      ---
+      class: center, middle
+
+      # .align-center[![robot](./src/images/robot.png) -------> ruby?]
+
+      ---
+      class: center, middle
+
+      # .align-center[![robot](./src/images/robot.png) -------> perl?]
+
+      ---
+      class: center, middle
+
+      # .align-center[![robot](./src/images/robot.png) -------> .yellow[node]]
+
+      ---
+      class: center, middle
+
+      # .align-centre[![scream](./src/images/scream.png) argument parsing]
+
+      ---
+      class: center, middle
+      background-image: url(./src/images/parser.gif)
+      background-size: cover
+      background-position: left
+
+      ---
+      class: center, middle
+
+      # .align-center[![robot](./src/images/robot.png) -------> .yellow[node]]
+
+      ---
+      class: middle
+      # .yellow-background[Irina's guide to interactivity&trade;]
+      ### .yellow[aka become CLI Pokemon Trainer]
+
+      ---
+      class: middle
+      # .yellow-background[Level 1]
+
+      # .align-centre[![scream](./src/images/scream.png) argument parsing]
+
+      ---
+      class: bottom
+      background-image: url(./src/images/yargs.png)
+      background-size: cover
+      background-position: left
+
+      .citation[yargs.js.org]
+
+      ---
+      class: middle
+      ### .yellow[https://www.npmjs.com/package/argv]
+      ### .yellow[https://www.npmjs.com/package/minimist]
+      ### .yellow[https://www.npmjs.com/package/meow]
+
+      ---
+      class: bottom
+      background-image: url(./src/images/yargs.png)
+      background-size: cover
+      background-position: left
+
+      .citation[yargs.js.org]
+
+      ---
+      class: middle
+      # .yellow-background[Irina's guide to interactivity&trade;]
+      ### .yellow[aka become CLI Pokemon Trainer]
+
+      ---
+      class: middle
+
+      # We use .yellow[options] on daily basis
+
+      --
+      ```shell
+      npm install -g yargs@latest
+      ```
+
+      ---
+      class: middle
+      # .yellow-background[Level 2]
+
+      # Give your options .yellow[aliases]
+
+      ---
+      class: middle
+      ```javascript
+        var argv = require('yargs')
+        .usage('Usage: $0 -n [string] -f [string]')
+        .option('n', {
+            alias: 'name',
+            describe: 'Twitter name of your choosing',
+            type: 'string',
+            demand: true
+        })
+      ```
+      .citation[https://www.npmjs.com/package/twitter-node-name]
+
+      ---
+      class: middle
+
+      ```shell
+      twitter-node-name --name ira<2728>
+      ```
+      # .yellow[or]
+      ```shell
+      twitter-node-name -n ira<2728>
+      ```
+
+      .citation[https://www.npmjs.com/package/twitter-node-name]
+
+      ---
+      class: middle
+      # .yellow-background[Level 3]
+
+      # Set up .yellow[default] values
+
+      ---
+      class: middle
+
+      ```javascript
+      .option("yellow", {
+          alias: "y",
+          describe: "yellow wombat",
+          type: "boolean",
+          default: true
+      })
+      ```
+      .citation[https://www.npmjs.com/package/wombatjs]
+
+      ---
+      class: middle
+      # .yellow-background[Level 4]
+
+      # Provide a .yellow[help] menu
+      ![pray](./src/images/pray.png)
+
+      ---
+      class: middle
+      ```javascript
+      var argv = require('yargs')
+         // all your options
+        .help()
+        .argv
+      ```
+
+      ---
+      class: middle
+      ```javascript
+      Usage: twitter-node-name -n [string] -f [string]
+
+      Options:
+      -f, --file  File with your Access Tokens                   [string] [required]
+      -n, --name  Twitter name of your choosing                  [string] [required]
+
+      Missing required arguments: f, n
+      ```
+
+      .citation[https://www.npmjs.com/package/twitter-node-name]
+
+      ---
+      class: middle
+      # .yellow-background[Level 5]
+
+      # Get .yellow[input] from your users
+
+
+      ---
+      class: middle
+      ```javascript
+      prompt.start()
+      var property = {
+          name: "yesno",
+          message: message,
+          validator: /y[es]*|n[o]?/,
+          warning: "Please respond with yer or no",
+          default: "yes"
+      }
+
+      prompt.get(property, function(err, result) {
+          if (err) console.log(err)
+          done(result)
+      })
+
+      ```
+      ---
+      class: middle
+
+      ```bash
+      prompt: Are you sure you want to overwrite: (yes)
       ```
 
       ---
       class: middle
 
-      # .yellow[npm]
+      # .align-center[wow p cool ![sparkles](./src/images/sparkles.png) prompt ![sparkles](./src/images/sparkles.png)]
+
+      .citation[https://www.npmjs.com/package/prompt]
+
+      ---
+      class: middle
+      ```javascript
+      // where setuprc is your questions file
+      promzard(setuprc, function(err, data) {
+        // do <2728> magic <2728> with data
+      }
+      // setuprc
+      module.exports = {
+          "displayName": prompt("Hey stranger, what shall you be called?", function(displayName) {
+              return displayName;
+          })
+      }
       ```
-      npm i coolModule@latest
+      ---
+      class: middle
+      ```bash
+      Hey stranger, what shall you be called?: irina
       ```
 
       ---
       class: middle
 
-      # .yellow[vagrant]
+      # .align-center[wow p cool ![sparkles](./src/images/sparkles.png) prompt ![sparkles](./src/images/sparkles.png)]
+
+      .citation[https://www.npmjs.com/package/promzard]
+
+      ---
+      class: middle
+      # .yellow-background[Level 6]
+
+      # Why not use .yellow[commands] ?
+      ![sassyLady](./src/images/sassyLady.png)
+
+      ---
+      class: middle
+
+      # We can make options .yellow[descriptive], but they are not .yellow[*interactive*]
+
+      ---
+      class: middle
+
+      # user issues commands to the program
+
+      ---
+      class: middle
+
+      # user ~~issues commands to~~ interacts with the program
+
+      ---
+      class: middle
+
+      # .align-center[wow p cool ![sparkles](./src/images/sparkles.png) .yellow[commands] ![sparkles](./src/images/sparkles.png)]
+
+      ---
+      class: middle
+      # .yellow[yargs] lets you build out command modules
+
+      ---
+      class: middle
+      ```javascript
+      yargs.command(require('text'))
+        .help()
+        .argv
       ```
-      vagrant i coolModule@latest
+
+      ---
+      class: middle
+      ```javascript
+      exports.command = 'text <contact> <message>'
+      exports.describe = 'text message your contact'
+      exports.builder = {
+        contact: {
+          default: 'mom'
+        },
+        message: {
+          default: 'brunch on sunday?'
+        }
+      }
+      exports.handler = function (argv) {
+        // do <2728> magic <2728>
+      }
       ```
+      ---
+      class: middle
+      # .yellow-background[Level 7]
+
+      # Just add .yellow[colour]
+      ![nailCare](./src/images/nail-care.png)
+
+      ---
+      class: middle
+
+      # .align-center[wow p cool ![sparkles](./src/images/sparkles.png) colour ![sparkles](./src/images/sparkles.png)]
+
+      .citation[https://www.npmjs.com/package/cli-color]
+
+      ---
+      class: middle
+
+      ```javascript
+      clc.yellow(wombat + concatArgvs(argv._))
+      ```
+
+      ---
+      class: middle
+
+      # .align-center[wow p cool ![sparkles](./src/images/sparkles.png) colour ![sparkles](./src/images/sparkles.png)]
+
+      .citation[https://www.npmjs.com/package/chalk]
+
+      ---
+      class: middle
+
+      ```javascript
+      chalk.yellow(wombat + concatArgvs(argv._))
+      ```
+      ---
+      class: middle
+      # .yellow-background[Level 8]
+
+      # Can we get the user to .yellow[interact] with the our program other than prompts?
+
+      ---
+      class: middle
+
+      # .align-centre[wow p cool ![sparkles](./src/images/sparkles.png) inquirer ![sparkles](./src/images/sparkles.png)]
+
+      .citation[https://www.npmjs.com/package/inquirer]
+
+      ---
+      class: middle
+      ### .align-centre[omg ![sparkles](./src/images/sparkles.png) prompt types ![sparkles](./src/images/sparkles.png)]
+      ```javascript
+      var prompt = inquirer.createPromptModule();
+      prompt({type: 'list', message: 'yourCoolQuestionPrompt' })
+        .then(// do <2728> magic <2728>);
+       
+      //{type: 'list'}
+      //{type: 'checkbox'}
+      ```
+
+      ---
+      background-image: url(./src/images/excited-baby.gif)
+      background-size: cover
+
+      ---
+      class: middle
+      # .yellow-background[Be the CLI Pokemon trainers you want to be]
+
+      ---
+      class: middle
+
+      # .yellow-background[Make Command Line Interfaces Great Again]
+
+      ---
+      class: center, middle
+
+      # .big-one[.yellow[Thank you] ![sparkles](./src/images/sparkles.png)]
+      ## .yellow[[@_lrlna](https://twitter.com/_lrlna)]
+      ## .yellow[lrlna.github.io/node-summit-2016]
 
 
     </textarea>
