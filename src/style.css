@@ -8,14 +8,28 @@ h1 {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 600;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
   color: #34000d;
 }
 
 .remark-slide-content .big-one{
-  font-size: 80px;
+  font-size: 60px;
+  font-weight: 900;
   line-height: 1.5;
+}
+
+.remark-slide-content .small-media {
+  font-size: 55px;
+  line-height: 1.5;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.remark-slide-content .small-media > img {
+  padding-left: 0.2em;
+  height: 2em;
 }
 
 a {
@@ -25,13 +39,22 @@ a {
 
 .remark-code, .remark-inline-code {
   font-family: 'Ubuntu Mono';
-  font-size: 22px;
+  font-size: 34px;
   line-height: 1.2em;
 }
 
-.grey {
-  background-color: #858585;
+.yellow {
+  border-bottom: 5px solid #fff200;
   display: inline;
+}
+
+.yellow-background {
+  background-color: #fff200;
+  display: inline;
+}
+
+.orange {
+  color: #de5116;
 }
 
 .purple {
@@ -40,12 +63,26 @@ a {
 }
 
 .citation {
-  background-color: #858585;
+  border-bottom: 5px solid #fff200;
   vertical-align: bottom;
   display: inline;
 
 }
 
+.align-centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-centre > img {
+    padding-left: 0.2em;
+}
+
 .quote {
   line-height: 1.1;
+}
+
+img {
+    //height: 1em;
 }
